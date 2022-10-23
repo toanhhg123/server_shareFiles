@@ -3,10 +3,13 @@ import connect from './connect/mogodb';
 import * as dotenv from 'dotenv';
 import userRouter from './routes/user';
 import bodyParser from 'body-parser';
+import cors from 'cors';
+
 
 dotenv.config();
 const app = express();
 
+app.use(cors); /* NEW */
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
