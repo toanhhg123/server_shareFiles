@@ -23,7 +23,7 @@
         "prettier": "^2.7.1"
     },
     "scripts": {
-        "start": "npm run build && node ./bin/index.js",
+        "start": "node ./bin/index.js",
         "start:prod": "npm run build && node ./bin/index.js",
         "start:nodemon": "nodemon",
         "build": "rimraf ./bin && tsc",
