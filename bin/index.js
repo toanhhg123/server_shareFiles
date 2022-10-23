@@ -31,8 +31,10 @@ const mogodb_1 = __importDefault(require("./connect/mogodb"));
 const dotenv = __importStar(require("dotenv"));
 const user_1 = __importDefault(require("./routes/user"));
 const body_parser_1 = __importDefault(require("body-parser"));
+const cors_1 = __importDefault(require("cors"));
 dotenv.config();
 const app = (0, express_1.default)();
+app.use(cors_1.default); /* NEW */
 app.use(body_parser_1.default.json());
 app.use(body_parser_1.default.urlencoded({ extended: true }));
 const port = process.env.PORT;
@@ -40,7 +42,7 @@ const port = process.env.PORT;
 app.get('/', (req, res) => {
     res.send('Express + TypeScript Server');
 });
-app.use("/auth", user_1.default);
+app.use('/auth', user_1.default);
 app.listen(port, () => {
     console.log(`[server]: Server is running at http://localhost:${port}`);
 });
