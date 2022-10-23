@@ -9,7 +9,7 @@ import cors from 'cors';
 dotenv.config();
 const app = express();
 
-app.use(cors); /* NEW */
+app.use(cors()); /* NEW */
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 

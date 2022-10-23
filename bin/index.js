@@ -34,7 +34,7 @@ const body_parser_1 = __importDefault(require("body-parser"));
 const cors_1 = __importDefault(require("cors"));
 dotenv.config();
 const app = (0, express_1.default)();
-app.use(cors_1.default); /* NEW */
+app.use((0, cors_1.default)()); /* NEW */
 app.use(body_parser_1.default.json());
 app.use(body_parser_1.default.urlencoded({ extended: true }));
 const port = process.env.PORT;

@@ -25,7 +25,7 @@
     "scripts": {
         "start": "node ./bin/index.js",
         "start:prod": "npm run build && node ./bin/index.js",
-        "start:nodemon": "node ./node_modules/nodemon/bin/nodemon.js",
+        "start:nodemon": "./node_modules/nodemon/bin/nodemon.js",
         "build": "npx tsc",
         "dev": "nodemon --inspect -e ts -w ./src -x npm run watch:serve",
         "watch:serve": "ts-node src/index.ts"
